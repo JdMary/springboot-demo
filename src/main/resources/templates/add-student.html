@@ -5,18 +5,20 @@
 </head>
 <body>
 <h1>Add Student</h1>
-<form action="#" th:action="@{/students}" th:object="${student}" method="post">
-    <label>First Name: </label>
+<form action="#" th:action="@{/students/add}" th:object="${student}" method="post">
+    <label>First Name:</label>
     <input type="text" th:field="*{firstname}"/><br/>
-    <label>Last Name: </label>
+
+    <label>Last Name:</label>
     <input type="text" th:field="*{lastname}"/><br/>
-    <label>Age: </label>
+
+    <label>Age:</label>
     <input type="number" th:field="*{age}"/><br/>
-    <label>Email: </label>
+
+    <label>Email:</label>
     <input type="email" th:field="*{email}"/><br/>
-    <button type="submit">Save</button>
+
+    <button type="submit">Add Student</button>
 </form>
-<br/>
-<a href="/students">Back to List</a>
 </body>
 </html>
